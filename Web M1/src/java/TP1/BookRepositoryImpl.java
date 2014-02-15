@@ -86,7 +86,8 @@ public class BookRepositoryImpl implements BookRepository{
     @Override  
     public void addBook(String title, String description, String price,  
             String pubDate)  {  
-        doAddBook(book(title, description, price, pubDate));  
+        doAddBook(book(title, description, price, pubDate));
+        System.out.println("AJOUT DU LIVRE  = " + title);
     }  
   
     @Override  
@@ -95,7 +96,8 @@ public class BookRepositoryImpl implements BookRepository{
         Book book = book(title, description, price, pubDate);  
         synchronized (this) {  
             book.setId(id);  
-            this.idToBookMap.put(id, book);  
+            this.idToBookMap.put(id, book); 
+            System.out.println("MODIF DU LIVRE  = " + id);
         }  
     }  
   

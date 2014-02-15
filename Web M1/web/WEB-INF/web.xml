@@ -4,9 +4,17 @@
         <servlet-name>BookListServlet</servlet-name>
         <servlet-class>TP1.web.BookListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BookEditorServlet</servlet-name>
+        <servlet-class>TP1.web.BookEditorServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BookListServlet</servlet-name>
-        <url-pattern>/TP1/book/*</url-pattern>
+        <url-pattern>/TP1/book/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookEditorServlet</servlet-name>
+        <url-pattern>/TP1/book</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
