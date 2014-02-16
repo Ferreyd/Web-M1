@@ -27,11 +27,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;  
   
 import TP1.BookRepository;  
+import TP1.JDBC;
   
-@WebServlet("/book/")  
+@WebServlet("/book/") 
+
 public class BookListServlet extends HttpServlet {  
       
-    @Inject   
+    @Inject @JDBC  
     private BookRepository bookRepo;  
   
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  

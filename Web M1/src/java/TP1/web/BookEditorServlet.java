@@ -8,6 +8,7 @@ package TP1.web;
 
 import TP1.Book;  
 import TP1.BookRepository;  
+import TP1.JDBC;
 import java.io.IOException;  
 import java.text.SimpleDateFormat;  
 import javax.inject.Inject;  
@@ -21,10 +22,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Nicolas
  */
-@WebServlet("/book")  
+@WebServlet("/book")
+
 public class BookEditorServlet extends HttpServlet {
 
-    @Inject  
+    @Inject @JDBC 
     private BookRepository bookRepo;  
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");  
   

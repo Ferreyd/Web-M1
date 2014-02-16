@@ -16,11 +16,13 @@ import java.util.HashMap;
 import java.util.List;  
 import java.util.Map;  
 import java.math.BigDecimal;  
+import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
  * @author Nicolas
  */
+@ApplicationScoped @InMemory
 public class BookRepositoryImpl implements BookRepository{
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");  
